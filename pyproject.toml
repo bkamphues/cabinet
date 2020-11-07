@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "cabinet"
 version = "0.1.0"
-description = ""
+description = "Cabinet is a program for content creators to archive projects in a modular fashion. "
 authors = ["Bo Kamphues <b.kamphues@outlook.com>"]
 
 [tool.poetry.dependencies]
