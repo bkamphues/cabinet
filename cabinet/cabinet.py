@@ -21,13 +21,26 @@
 # SOFTWARE.
 
 import sys
-from . import gui
-from PySide2.QtWidgets import QApplication
+
+# from .gui import MainWindow
+from PySide2.QtWidgets import QApplication, QDialog
 
 
-def main():
+class MainWindow(QDialog):
+    def __init__(self, parent=None):
+        super(MainWindow, self).__init__(parent)
+        self.setWindowTitle("Cabinet")
+        self.show()
 
-    app = QApplication(sys.argv)
-    window = gui.MainWindow()
-    window.show()
-    sys.exit(app.exec_())
+
+if __name__ == "__main__":
+    # run the program
+
+    # initialize application
+    cabinet = QApplication(sys.argv)
+
+    # fetch main window and open it
+    window = MainWindow()
+
+    # start application
+    cabinet.exec_()
