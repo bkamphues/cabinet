@@ -20,8 +20,14 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-from gui import MainWindow
+import sys
+from . import gui
+from PySide2.QtWidgets import QApplication
+
 
 def main():
-    
-    window = MainWindow()
+
+    app = QApplication(sys.argv)
+    window = gui.MainWindow()
+    window.show()
+    sys.exit(app.exec_())
