@@ -20,27 +20,24 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+
 import sys
 
-# from .gui import MainWindow
+from cabinet.ui import MainWindow
 from PySide2.QtWidgets import QApplication, QDialog
 
 
-class MainWindow(QDialog):
-    def __init__(self, parent=None):
-        super(MainWindow, self).__init__(parent)
-        self.setWindowTitle("Cabinet")
-        self.show()
-
-
-if __name__ == "__main__":
+def main():
     # run the program
 
-    # initialize application
+    # initialise the program
     cabinet = QApplication(sys.argv)
 
     # fetch main window and open it
     window = MainWindow()
 
-    # start application
-    cabinet.exec_()
+    return cabinet.exec_()
+
+
+if __name__ == "__main__":
+    main()
