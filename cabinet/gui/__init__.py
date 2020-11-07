@@ -19,26 +19,3 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
-
-
-import sys
-
-from cabinet.gui.main_ui import MainWindow
-from PySide2.QtWidgets import QApplication, QDialog
-
-
-def main():
-    # run the program
-
-    # initialise the program
-    cabinet = QApplication(sys.argv)
-
-    # fetch main window and open it
-    window = MainWindow()
-
-    # return the main program thread
-    return cabinet.exec_()
-
-
-if __name__ == "__main__":
-    main()
