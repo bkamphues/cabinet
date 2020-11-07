@@ -6,7 +6,8 @@ authors = ["Bo Kamphues <b.kamphues@outlook.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = ">=3.8,<3.9"
+PySide2 = "^5.15.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
