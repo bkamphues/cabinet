@@ -22,6 +22,7 @@
 
 
 import sys
+import time
 
 from cabinet.gui.main_ui import MainWindow
 from PySide2.QtWidgets import QApplication, QDialog

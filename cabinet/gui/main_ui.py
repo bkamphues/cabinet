@@ -20,11 +20,26 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-from PySide2.QtWidgets import QDialog
+from PySide2.QtWidgets import QMainWindow
+from cabinet import __version__
 
 
-class MainWindow(QDialog):
+class MainWindow(QMainWindow):
+    # the main cabinet window
+
     def __init__(self, parent=None):
+        # initializes the main cabinet window
+
+        # run parent class initialization first
         super(MainWindow, self).__init__(parent)
-        self.setWindowTitle("Cabinet")
+
+        # general window data
+        self.setWindowTitle("Cabinet %s" % __version__)
+        self.setMinimumSize(800, 500)
+
+        # menu setup
+        self.menu = self.menuBar()
+        self.file_menu = self.menu.addMenu("Manage")
+
+        # end initialization by calling the window
         self.show()
