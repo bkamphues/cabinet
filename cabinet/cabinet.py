@@ -26,13 +26,17 @@ import time
 
 from cabinet.gui.main_ui import MainWindow
 from PySide2.QtWidgets import QApplication, QDialog
+from PySide2.QCore import QCoreApplication
 
 
 def main():
     # run the program
 
+    # check if command line or gui is used
+    use_gui = not "--no-gui" in sys.argv
+
     # initialise the program
-    cabinet = QApplication(sys.argv)
+    cabinet = QApplication(sys.argv) if use_gui else QCoreApplication(sys.argv)
 
     # fetch main window and open it
     window = MainWindow()
